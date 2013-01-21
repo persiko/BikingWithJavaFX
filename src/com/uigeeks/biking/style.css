@@ -1,15 +1,15 @@
 #detail-box {
-	-fx-background-color: #2a2a2aCC;
-	-fx-background-radius: 0px 0px 7px 7px;
+    -fx-background-color: #2a2a2aCC;
+    -fx-background-radius: 0px 0px 7px 7px;
 }
 
 #text {
-	-fx-font-size: 24px;
-	-fx-fill: white;
+    -fx-font-size: 24px;
+    -fx-fill: white;
 }
 
 #photo-view {
-	-fx-border-width: 10px;
-	-fx-border-color: white;
-	-fx-border-radius: 10px;
+    -fx-border-width: 10px;
+    -fx-border-color: white;
+    -fx-border-radius: 10px;
 }

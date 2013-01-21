@@ -21,8 +21,9 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Scene scene = new Scene(root);
-        stage.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("Biking with JavaFX");
+        stage.setScene(scene);
         stage.show();
     }
 
