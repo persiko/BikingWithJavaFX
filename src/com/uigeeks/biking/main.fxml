@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.uigeeks.biking.components.map.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.web.*?>
+<?scenebuilder-classpath-element ../../../../../../NetBeansProjects/BikingWithJavaFX/dist/BikingWithJavaFX.jar?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="931.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.uigeeks.biking.GuiController">
+  <children>
+    <BorderPane prefHeight="640.0" prefWidth="931.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <SplitPane dividerPositions="0.6759956942949408" focusTraversable="true" prefHeight="160.0" prefWidth="200.0">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <ToolBar id="mapToolBar" fx:id="mapToolbar" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_CENTER">
+                      <items>
+                        <Region id="bottomToolbarSpring" fx:id="mapToolbarSpring" prefHeight="200.0" prefWidth="-1.0" />
+                        <Label id="weather" fx:id="weatherLabel" contentDisplay="LEFT" text="8°" />
+                      </items>
+                      <BorderPane.margin>
+                        <Insets />
+                      </BorderPane.margin>
+                    </ToolBar>
+                  </bottom>
+                  <center>
+                    <WebView id="mapVIew" fx:id="mapView" prefHeight="200.0" prefWidth="200.0" />
+                  </center>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+      </center>
+    </BorderPane>
+  </children>
+</AnchorPane>
