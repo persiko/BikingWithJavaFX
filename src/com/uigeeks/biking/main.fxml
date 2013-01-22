@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.uigeeks.biking.components.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.geometry.*?>
@@ -9,7 +8,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.web.*?>
-<?scenebuilder-classpath-element ../../../../../../NetBeansProjects/BikingWithJavaFX/dist/BikingWithJavaFX.jar?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="931.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.uigeeks.biking.GuiController">
   <children>
@@ -41,23 +39,7 @@
               <children>
                 <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <center>
-                    <VBox prefHeight="319.0" prefWidth="298.0" spacing="5.0">
-                      <children>
-                        <Label fx:id="eventTitle" prefWidth="-1.0" text="" />
-                        <AnchorPane id="event-photo-wrapper" prefHeight="250.0" prefWidth="250.0" scaleY="1.0">
-                          <children>
-                            <ImageView id="event-photo" fx:id="eventPhoto" fitHeight="242.75" fitWidth="285.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                          </children>
-                          <VBox.margin>
-                            <Insets left="1.0" right="1.0" top="1.0" />
-                          </VBox.margin>
-                        </AnchorPane>
-                        <Label fx:id="eventDescription" text="" wrapText="true" />
-                      </children>
-                      <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </padding>
-                    </VBox>
+                    <WebView fx:id="eventView" prefHeight="638.0" prefWidth="298.0" />
                   </center>
                 </BorderPane>
               </children>

@@ -4,10 +4,10 @@
  */
 package com.uigeeks.biking;
 
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
+import org.w3c.dom.Document;
+import org.w3c.dom.html.HTMLImageElement;
+
 
 /**
  *
@@ -16,9 +16,7 @@ import javafx.scene.layout.VBox;
 public class EventController {
 
     private static EventController instance;
-    private Label titleLabel;
-    private ImageView imageView;
-    private Label descriptionLabel;
+    private WebView eventView;
 
     private EventController() {
     }
@@ -30,27 +28,24 @@ public class EventController {
         return instance;
     }
 
-    public void init(Label titleLabel, ImageView imageView, Label descriptionLabel) {
-        this.titleLabel = titleLabel;
-        this.imageView = imageView;
-        this.descriptionLabel = descriptionLabel;
+    public void init(WebView eventView) {
+        this.eventView = eventView;
+        this.eventView.getEngine().load(getClass().getResource("event.html").toExternalForm());
     }
 
     public void showEvent(Event event) {
-        // Title
-        titleLabel.setText(event.getTitle());
+        Document document = this.eventView.getEngine().getDocument();
+        document.getElementById("title").setTextContent(event.getTitle());
+        document.getElementById("description").setTextContent(event.getDescription());
 
-        // Photo
-        final String imageUrl = event.getImageUrl();
-        if (imageUrl == null || imageUrl.length() == 0) {
-            imageView.setScaleY(0);
+        HTMLImageElement image = (HTMLImageElement) document.getElementById("photo");
+
+        if (event.hasImage()) {
+            image.setClassName("");
+            image.setSrc(event.getImageUrl());
         } else {
-            imageView.setScaleY(1);
-            imageView.setVisible(true);
-            imageView.setImage(new Image(imageUrl));
+            image.setClassName("hidden");
         }
 
-        // Description
-        descriptionLabel.setText(event.getDescription());
     }
 }

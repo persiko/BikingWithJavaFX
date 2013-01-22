@@ -39,11 +39,7 @@ public class GuiController implements Initializable {
     @FXML
     private WebView mapView;
     @FXML
-    private Label eventTitle;
-    @FXML
-    private ImageView eventPhoto;
-    @FXML
-    private Label eventDescription;
+    private WebView eventView;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -78,6 +74,6 @@ public class GuiController implements Initializable {
     }
 
     private void initEvent() {
-        EventController.getInstance().init(eventTitle, eventPhoto, eventDescription);
+        EventController.getInstance().init(eventView);
     }
 }

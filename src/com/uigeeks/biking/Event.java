@@ -22,7 +22,7 @@ public class Event {
         this.description = description;
         this.imageUrl = imageUrl;
     }
-    
+
     /**
      * @return the title
      */
@@ -63,5 +63,10 @@ public class Event {
      */
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    boolean hasImage() {
+        final String url = this.getImageUrl();
+        return url != null && url.length() > 0;
     }
 }
