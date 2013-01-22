@@ -36,22 +36,27 @@ html,body,#map_canvas {
 				});
 
 				$(xml).find("wpt").each(function() {
-					var lat = $(this).attr("lat");
-					var lon = $(this).attr("lon");
-					var name = $(this).attr("name");
-					var src = $(this).find("link").text();
-					var p = new google.maps.LatLng(lat, lon);
-
+					var $this = $(this);
+					var desc = $this.find('desc').text();
+					var name = $this.find('name').text();
+					var type = $this.find('type').text();
+					var src = $this.find('link').attr('href');
+					
+					var p = new google.maps.LatLng($this.attr("lat"), $this.attr("lon"));
+					
 					var marker = new google.maps.Marker({
 						position: p,
 						map: map,
-						title: "Start",
-						icon: "http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Camera-photo.svg/40px-Camera-photo.svg.png"
+						title: name,
+						icon: iconForType(type)
 					});
 
 					google.maps.event.addListener(marker, 'click', function showImage(event) {
-						alert(":" + jfxCallback);
-						jfxCallback.openImage(src);
+						src = src ? src : '';
+						
+						if (window.jfxCallback) {
+							window.jfxCallback.showEvent(name, type, desc, src);
+						}
 					});
 					
 				});
@@ -70,6 +75,19 @@ html,body,#map_canvas {
 				map.fitBounds(bounds);
 			}
 		});
+	}
+	
+	var iconForType = function(type) {
+		switch (type) {
+			case 'photo':
+				return 'icons/camera.png';
+			
+			case 'comment':
+				return 'icons/comment.png';
+			
+			default:
+				return '';
+		}
 	}
 	
 </script>
