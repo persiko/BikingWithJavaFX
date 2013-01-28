@@ -21,6 +21,9 @@
                   <bottom>
                     <ToolBar id="mapToolBar" fx:id="mapToolbar" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_CENTER">
                       <items>
+                        <Label text="Lund" />
+                        <ProgressBar prefWidth="200.0" progress="0.25" />
+                        <Label text="Nice" />
                         <Region id="bottomToolbarSpring" fx:id="mapToolbarSpring" prefHeight="200.0" prefWidth="-1.0" />
                         <Label id="weather" fx:id="weatherLabel" contentDisplay="LEFT" text="8°" />
                       </items>
@@ -38,8 +41,38 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
               <children>
                 <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <GridPane id="statistics-pane" hgap="0.0" prefWidth="298.0" style="-fx-background-color: #fafafa;" styleClass="">
+                      <children>
+                        <Label text="Distance travelled" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label text="Dinstance left" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Label text="42 km" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="1232 km" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Average speed" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <Label text="26 km/h" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Flat tires" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <Label text="3" GridPane.columnIndex="1" GridPane.rowIndex="3" />          
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="158.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="135.0" />
+                      </columnConstraints>
+                      <padding>
+                        <Insets left="5.0" />
+                      </padding>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                      <BorderPane.margin>
+                        <Insets />
+                      </BorderPane.margin>
+                    </GridPane>
+                  </bottom>
                   <center>
-                    <WebView fx:id="eventView" prefHeight="638.0" prefWidth="298.0" />
+                    <WebView fx:id="eventView" prefHeight="638.0" prefWidth="298.0" style="" />
                   </center>
                 </BorderPane>
               </children>
