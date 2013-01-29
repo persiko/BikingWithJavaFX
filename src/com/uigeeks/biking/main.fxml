@@ -42,16 +42,16 @@
               <children>
                 <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <bottom>
-                    <GridPane id="statistics-pane" hgap="0.0" prefWidth="298.0" style="-fx-background-color: #fafafa;" styleClass="">
+                    <GridPane id="statistics-pane" hgap="0.0" prefWidth="298.0" style="-fx-background-color: #fafafa;" styleClass="null">
                       <children>
                         <Label text="Distance travelled" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <Label text="Dinstance left" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                        <Label text="42 km" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                        <Label text="1232 km" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="443 km" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="1262 km" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label text="Average speed" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                         <Label text="26 km/h" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label text="Flat tires" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                        <Label text="3" GridPane.columnIndex="1" GridPane.rowIndex="3" />          
+                        <Label text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                       </children>
                       <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="158.0" />
